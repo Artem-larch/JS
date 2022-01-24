@@ -59,7 +59,7 @@ console.log(`В этом числе ${numSize.length} цифр.`)
 
 // task #5
 
-let numbers = prompt('Введите 10 чисел')
+let numbers = prompt('Введите 10 чисел (через пробел)')
 
 let arrNumbers = numbers.split(" ")
 let positive = 0
