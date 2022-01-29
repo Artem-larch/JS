@@ -60,20 +60,13 @@ while (confirm(`${days[currentDay]}. Хотите увидеть следующ�
 // task #4
 // Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.
 
-for (let i = 1; i < 11; i++) {
-    let multiplyResult = ''
-    multiplyResult+= `2 x ${i} = ` + (2 * i) + '  '
-    multiplyResult+= `3 x ${i} = ` + (3 * i) + '  '
-    multiplyResult+= `4 x ${i} = ` + (4 * i) + '  '
-    multiplyResult+= `5 x ${i} = ` + (5 * i) + '  '
-    multiplyResult+= `6 x ${i} = ` + (6 * i) + '  '
-    multiplyResult+= `7 x ${i} = ` + (7 * i) + '  '
-    multiplyResult+= `8 x ${i} = ` + (8 * i) + '  '
-    multiplyResult+= `9 x ${i} = ` + (9 * i) + '<br>'
-
-    // console.log(multiplyResult);
-    let table = document.getElementById('table')
-    table.innerHTML += multiplyResult
+for (let i = 2; i <= 9; i++) {
+    const container = document.createElement('div')
+    container.classList.add('container')
+    for (let j = 1; j <= 9; j++) {
+        container.innerHTML += `<p>${i} x ${j} = ${i*j}</p>`
+    }
+    document.body.append(container)
 }
 
 
@@ -81,11 +74,12 @@ for (let i = 1; i < 11; i++) {
 // task #5
 // Игра «Угадай число».
 
+/*
 let userGuess = prompt('Добро пожаловать в игру "Угадай число"!\nВам требуется угадать число от 0 до 100.')
 let randomNumber = Math.floor(Math.random() * 10) + 1
 
-if (userGuess == randomNumber){
-    alert('Вы угадали число! 🎉')
+if (userGuess === randomNumber){
+    alert('Вы угадали число!')
 }
 else if (userGuess > randomNumber) {
     alert('Загаданное число больше.')
@@ -93,5 +87,4 @@ else if (userGuess > randomNumber) {
 else if (userGuess < randomNumber){
     alert('Загаданное число меньше.')
 }
-
-// 
+*/
